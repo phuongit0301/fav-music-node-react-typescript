@@ -1,0 +1,95 @@
+button:focus {
+	outline: none;
+}
+
+button:focus-visible {
+	/* Draw a very noticeable focus style for
+	 keyboard-focus on browsers that do support
+	 :focus-visible */
+	outline: 2px solid #443ffc;
+	outline-offset: 3px;
+}
+
+.button {
+	pointer-events: auto;
+	cursor: pointer;
+	background: #e7e7e7;
+	border: none;
+	padding: 22px 10px;
+	margin: 0;
+	font-family: inherit;
+	font-size: inherit;
+	position: sticky;
+	top: 80%;
+	left: 80%;
+	border-radius: 100%;
+	width: 90px;
+}
+
+.button::before,
+.button::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.button--mimas {
+	text-transform: uppercase;
+	letter-spacing: 0.05rem;
+	font-weight: 700;
+	font-size: 0.85rem;
+	overflow: hidden;
+	color: #fff;
+	background: #e7e7e7;
+}
+
+.button--mimas span {
+	position: relative;
+	mix-blend-mode: difference;
+}
+
+.button--mimas::before {
+	content: '';
+	background: #000;
+	width: 120%;
+	left: -10%;
+	transform: skew(28deg);
+	transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.button--mimas:hover::before {
+	transform: translate3d(100%,0,0);
+}
+
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+table {
+    margin-top: 50px;
+    width: 100%;
+    border-collapse: collapse;
+    background: #34495e;
+    color: #f3f3f3;
+}
+  
+td, th {
+    padding: 8px;
+    text-align: left;
+}
+
+tr:nth-of-type(odd) {
+    background: #16a085;
+}
+  
+th {
+    background: #2c3e50;
+    font-weight: bold;
+}
+
+tr.item:hover {
+    opacity: .7
+}
